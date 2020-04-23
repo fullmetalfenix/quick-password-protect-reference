@@ -1,0 +1,6 @@
+#If just for file(s) you would add them in <Files whatever.whatever> or <FilesMatch "^(one|two).extension$"> here.
+#In wordpress, add ErrorDocument 401 default to overwrite the 404 error.
+AuthName "Dialog prompt"
+AuthType Basic
+AuthUserFile /home/username/example.com/.htpasswd
+Require valid-user
