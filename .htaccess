@@ -2,5 +2,6 @@
 #In wordpress, add ErrorDocument 401 default to overwrite the 404 error.
 AuthName "Dialog prompt"
 AuthType Basic
+#path to the .htpasswd file on server
 AuthUserFile /home/username/example.com/.htpasswd
 Require valid-user
