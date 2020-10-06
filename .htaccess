@@ -1,7 +1,13 @@
-#If just for file(s) you would add them in <Files whatever.whatever> or <FilesMatch "^(one|two).extension$"> here.
-#In wordpress, add ErrorDocument 401 default to overwrite the 404 error.
+
 AuthName "Dialog prompt"
 AuthType Basic
-#path to the .htpasswd file on server
+
+#If its a WordPress directory, add "ErrorDocument 401 default" - why? otherwise WP will send you to a 404.
+
+# For just a file add <Files file.extension>
+# For multifiles add <FilesMatch> - more info here: https://www.askapache.com/htaccess/using-filesmatch-and-files-in-htaccess/
+
+#put the path to the .htpasswd you also added / are adding here, in the same folder
 AuthUserFile /home/username/example.com/.htpasswd
+
 Require valid-user
